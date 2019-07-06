@@ -10,4 +10,13 @@ import Foundation
 
 enum NetworkingError: Error {
     case wrongRequest
+    case urlBuildingError
+    
+    init(error: Error){
+        switch error {
+       
+        default:
+            self = .wrongRequest
+        }
+    }
 }

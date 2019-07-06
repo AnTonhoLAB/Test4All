@@ -1,5 +1,5 @@
 //
-//  ListProtocol.swift
+//  NetworkingSetup.swift
 //  Test4All
 //
 //  Created by George Gomes on 06/07/19.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol ListProviderProtocol {
-    func getList(completion: @escaping(Result<Int,NetworkingError>)->Void)
-}
+
