@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TaskProviderProtocol {
-    func getList(completion: @escaping(Result<Int,NetworkingError>)->Void)
+    func getList(completion: @escaping(Result<Tasks,NetworkingError>)->Void)
 }

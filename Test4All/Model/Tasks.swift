@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TasksList: Codable {
+struct Tasks: Codable {
 
     var taskIdList: [String]?
 

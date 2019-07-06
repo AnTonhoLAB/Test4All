@@ -24,6 +24,8 @@
 		5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84C22D14C77009C87B1 /* Task.swift */; };
 		5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84E22D14CEC009C87B1 /* Tasks.swift */; };
 		5EB8E85122D15043009C87B1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85022D15043009C87B1 /* Comment.swift */; };
+		5EB8E85322D153D4009C87B1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85222D153D4009C87B1 /* Decodable.swift */; };
+		5EB8E85522D1598F009C87B1 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85422D1598F009C87B1 /* URLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		5EB8E84C22D14C77009C87B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		5EB8E84E22D14CEC009C87B1 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		5EB8E85022D15043009C87B1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5EB8E85222D153D4009C87B1 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		5EB8E85422D1598F009C87B1 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				5EB8E83C22D13E21009C87B1 /* NSObject.swift */,
+				5EB8E85222D153D4009C87B1 /* Decodable.swift */,
+				5EB8E85422D1598F009C87B1 /* URLSession.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,8 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB8E81722D13AD4009C87B1 /* ViewController.swift in Sources */,
+				5EB8E85522D1598F009C87B1 /* URLSession.swift in Sources */,
 				5EB8E84022D13ED8009C87B1 /* NetworkingState.swift in Sources */,
 				5EB8E84822D13FAF009C87B1 /* TaskProvider.swift in Sources */,
+				5EB8E85322D153D4009C87B1 /* Decodable.swift in Sources */,
 				5EB8E83822D13D89009C87B1 /* Observable.swift in Sources */,
 				5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */,
 				5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */,
