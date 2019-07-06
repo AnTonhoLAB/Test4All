@@ -13,6 +13,9 @@
 		5EB8E81C22D13AD9009C87B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E81B22D13AD9009C87B1 /* Assets.xcassets */; };
 		5EB8E81F22D13AD9009C87B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E81D22D13AD9009C87B1 /* LaunchScreen.storyboard */; };
 		5EB8E82A22D13ADA009C87B1 /* Test4AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E82922D13ADA009C87B1 /* Test4AllTests.swift */; };
+		5EB8E83822D13D89009C87B1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83722D13D89009C87B1 /* Observable.swift */; };
+		5EB8E83A22D13DAB009C87B1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83922D13DAB009C87B1 /* Bindable.swift */; };
+		5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83C22D13E21009C87B1 /* NSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		5EB8E82522D13ADA009C87B1 /* Test4AllTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test4AllTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB8E82922D13ADA009C87B1 /* Test4AllTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test4AllTests.swift; sourceTree = "<group>"; };
 		5EB8E82B22D13ADA009C87B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB8E83722D13D89009C87B1 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		5EB8E83922D13DAB009C87B1 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		5EB8E83C22D13E21009C87B1 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,10 @@
 		5EB8E81322D13AD4009C87B1 /* Test4All */ = {
 			isa = PBXGroup;
 			children = (
-				5EB8E81422D13AD4009C87B1 /* AppDelegate.swift */,
-				5EB8E81622D13AD4009C87B1 /* ViewController.swift */,
-				5EB8E81822D13AD4009C87B1 /* Main.storyboard */,
-				5EB8E81B22D13AD9009C87B1 /* Assets.xcassets */,
-				5EB8E81D22D13AD9009C87B1 /* LaunchScreen.storyboard */,
-				5EB8E82022D13AD9009C87B1 /* Info.plist */,
+				5EB8E83B22D13DFE009C87B1 /* Extensions */,
+				5EB8E83622D13D6A009C87B1 /* MVVM-Reactive */,
+				5EB8E83522D13D2F009C87B1 /* App */,
+				5EB8E83422D13CAD009C87B1 /* SupportingFiles */,
 			);
 			path = Test4All;
 			sourceTree = "<group>";
@@ -94,6 +98,43 @@
 				5EB8E82B22D13ADA009C87B1 /* Info.plist */,
 			);
 			path = Test4AllTests;
+			sourceTree = "<group>";
+		};
+		5EB8E83422D13CAD009C87B1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E81422D13AD4009C87B1 /* AppDelegate.swift */,
+				5EB8E81B22D13AD9009C87B1 /* Assets.xcassets */,
+				5EB8E81D22D13AD9009C87B1 /* LaunchScreen.storyboard */,
+				5EB8E82022D13AD9009C87B1 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5EB8E83522D13D2F009C87B1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E81822D13AD4009C87B1 /* Main.storyboard */,
+				5EB8E81622D13AD4009C87B1 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5EB8E83622D13D6A009C87B1 /* MVVM-Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E83722D13D89009C87B1 /* Observable.swift */,
+				5EB8E83922D13DAB009C87B1 /* Bindable.swift */,
+			);
+			path = "MVVM-Reactive";
+			sourceTree = "<group>";
+		};
+		5EB8E83B22D13DFE009C87B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E83C22D13E21009C87B1 /* NSObject.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB8E81722D13AD4009C87B1 /* ViewController.swift in Sources */,
+				5EB8E83822D13D89009C87B1 /* Observable.swift in Sources */,
+				5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */,
+				5EB8E83A22D13DAB009C87B1 /* Bindable.swift in Sources */,
 				5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8JPD2534R;
-				INFOPLIST_FILE = Test4All/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Test4All/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8JPD2534R;
-				INFOPLIST_FILE = Test4All/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Test4All/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
