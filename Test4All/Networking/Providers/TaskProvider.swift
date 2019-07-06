@@ -21,18 +21,8 @@ final class TaskProvider: TaskProviderProtocol {
             return
         }
         
-        let completionHandler: (Result<Tasks, Error>) -> Void =  { result in
-            switch result {
-            case .success(let tasks):
-                completion(.success(tasks))
-            case .failure(let error):
-                let networkingError = NetworkingError(error: error)
-                completion(.failure(networkingError))
-            }
-        }
-        
+        let completionHandler: (Result<Tasks, Error>) -> Void = responseBuilder(completion: completion)
         URLSession.shared.dataTask(with: url, completion: completionHandler).resume()
-
     }
     
     func getTask(with id: String, completion: @escaping (Result<Task, NetworkingError>) -> Void) {
@@ -42,16 +32,20 @@ final class TaskProvider: TaskProviderProtocol {
             return
         }
         
-        let completionHandler: (Result<Task, Error>) -> Void =  { result in
+        let completionHandler: (Result<Task, Error>) -> Void = responseBuilder(completion: completion)
+        URLSession.shared.dataTask(with: url, completion: completionHandler).resume()
+    }
+    
+    
+    func responseBuilder<T>(completion: @escaping (Result<T, NetworkingError>) -> Void  ) -> (Result<T, Error>) -> Void where T: Decodable {
+        return  { result in
             switch result {
-            case .success(let task):
-                completion(.success(task))
+            case .success(let data):
+                completion(.success(data))
             case .failure(let error):
                 let networkingError = NetworkingError(error: error)
                 completion(.failure(networkingError))
             }
         }
-        
-        URLSession.shared.dataTask(with: url, completion: completionHandler).resume()
     }
 }

@@ -27,6 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 break
             }
         }
+        
+        taskProvider.getList2 { (res) in
+            switch res {
+                
+            case .success(_):
+                break
+            case .failure(_):
+                break
+            }
+        }
+        
+        
         return true
     }
 }
