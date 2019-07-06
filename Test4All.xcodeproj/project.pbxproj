@@ -21,6 +21,9 @@
 		5EB8E84622D13F83009C87B1 /* TaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84522D13F83009C87B1 /* TaskProtocol.swift */; };
 		5EB8E84822D13FAF009C87B1 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84722D13FAF009C87B1 /* TaskProvider.swift */; };
 		5EB8E84A22D1400B009C87B1 /* NetworkingSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84922D1400B009C87B1 /* NetworkingSetup.swift */; };
+		5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84C22D14C77009C87B1 /* Task.swift */; };
+		5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84E22D14CEC009C87B1 /* Tasks.swift */; };
+		5EB8E85122D15043009C87B1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85022D15043009C87B1 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		5EB8E84522D13F83009C87B1 /* TaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProtocol.swift; sourceTree = "<group>"; };
 		5EB8E84722D13FAF009C87B1 /* TaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
 		5EB8E84922D1400B009C87B1 /* NetworkingSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSetup.swift; sourceTree = "<group>"; };
+		5EB8E84C22D14C77009C87B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5EB8E84E22D14CEC009C87B1 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		5EB8E85022D15043009C87B1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 				5EB8E83E22D13EBC009C87B1 /* Networking */,
 				5EB8E83B22D13DFE009C87B1 /* Extensions */,
 				5EB8E83622D13D6A009C87B1 /* MVVM-Reactive */,
+				5EB8E84B22D14C5F009C87B1 /* Model */,
 				5EB8E83522D13D2F009C87B1 /* App */,
 				5EB8E83422D13CAD009C87B1 /* SupportingFiles */,
 			);
@@ -174,6 +181,16 @@
 				5EB8E84522D13F83009C87B1 /* TaskProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5EB8E84B22D14C5F009C87B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E84E22D14CEC009C87B1 /* Tasks.swift */,
+				5EB8E84C22D14C77009C87B1 /* Task.swift */,
+				5EB8E85022D15043009C87B1 /* Comment.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +298,11 @@
 				5EB8E84022D13ED8009C87B1 /* NetworkingState.swift in Sources */,
 				5EB8E84822D13FAF009C87B1 /* TaskProvider.swift in Sources */,
 				5EB8E83822D13D89009C87B1 /* Observable.swift in Sources */,
+				5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */,
+				5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */,
 				5EB8E84622D13F83009C87B1 /* TaskProtocol.swift in Sources */,
 				5EB8E84222D13F01009C87B1 /* NetworkingError.swift in Sources */,
+				5EB8E85122D15043009C87B1 /* Comment.swift in Sources */,
 				5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */,
 				5EB8E83A22D13DAB009C87B1 /* Bindable.swift in Sources */,
 				5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */,
