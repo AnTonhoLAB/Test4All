@@ -22,7 +22,7 @@ extension URLSession {
             }
             
             do {
-                let myNewObject = try JSONDecoder().decode(T.self, from: data)
+                let myNewObject = try Decode.decodeObject(type: T.self, from: data)
                 completion(.success(myNewObject))
             } catch {
                 completion(.failure(error))

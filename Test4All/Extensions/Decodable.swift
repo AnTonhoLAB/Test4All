@@ -8,14 +8,18 @@
 
 import Foundation
 
-extension Decodable {
-    static func decodeObject<T>(type: T.Type, from data: Data) where T: Decodable  {
+enum DecodeError: Error {
+    case decodingError
+}
+
+class Decode {
+    static func decodeObject<T>(type: T.Type, from data: Data) throws -> T where T: Decodable  {
         let decoder = JSONDecoder()
         do {
-            let userDictionary = try decoder.decode(T.self, from: data)
-            print(userDictionary)
+            let objectFromDecode = try decoder.decode(T.self, from: data)
+            return objectFromDecode
         } catch {
-            print(error)
+            throw DecodeError.decodingError
         }
     }
 }
