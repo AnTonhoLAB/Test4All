@@ -15,6 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let taskProvider = TaskProvider()
+        
+        taskProvider.getImageData(withLink: "http://dev.4all.com:3003/usuario1.jpeg") { (result) in
+            switch result {
+                
+            case .success(let data):
+                print(data)
+                break
+            case .failure(_):
+                break
+            }
+        }
+        
+        
+        
         return true
     }
 }
