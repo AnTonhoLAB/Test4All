@@ -15,6 +15,8 @@ struct Tasks: Codable {
     init(taskId:[String]) {
         self.taskIdList = taskId
     }
+    
+    init() { }
 
     public enum CodingKeys: String, CodingKey {
         case taskIdList = "lista"

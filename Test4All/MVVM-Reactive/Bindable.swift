@@ -10,7 +10,7 @@ import UIKit
 
 protocol Bindable: NSObjectProtocol {
     associatedtype BindingType: Equatable
-    func observingValue() -> BindingType?
+    func observingValue() -> BindingType
     func updateValue(with value: BindingType)
     func bind(with observable: Observable<BindingType>)
 }
@@ -24,9 +24,7 @@ extension Bindable where Self: NSObject {
     private var binder: Observable<BindingType> {
         get {
             guard let value = objc_getAssociatedObject(self, &AssociatedKeys.binder) as? Observable<BindingType> else {
-                let newValue = Observable<BindingType>()
-                objc_setAssociatedObject(self, &AssociatedKeys.binder, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                return newValue
+                fatalError("Type do not exist")
             }
             return value
         }
@@ -35,11 +33,11 @@ extension Bindable where Self: NSObject {
         }
     }
     
-    func getBinderValue() -> BindingType? {
+    func getBinderValue() -> BindingType {
         return binder.value
     }
     
-    func setBinderValue(with value: BindingType?) {
+    func setBinderValue(with value: BindingType) {
         binder.value = value
     }
     
