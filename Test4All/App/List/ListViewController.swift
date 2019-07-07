@@ -27,6 +27,7 @@ final class ListViewController: UpdatableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = viewModel.title
         self.bind(with: viewModel.networkingState)
         
         viewModel.list.bind { _, _ in

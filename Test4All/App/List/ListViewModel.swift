@@ -10,6 +10,7 @@ import Foundation
 
 final class ListViewModel {
     
+    let title = "Lista de ids"
     let networkingState: Observable<NetworkingState> = Observable(.default)
     let list: Observable<Tasks> = Observable(Tasks())
     
