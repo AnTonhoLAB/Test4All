@@ -26,6 +26,7 @@
 		5EB8E85122D15043009C87B1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85022D15043009C87B1 /* Comment.swift */; };
 		5EB8E85322D153D4009C87B1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85222D153D4009C87B1 /* Decodable.swift */; };
 		5EB8E85522D1598F009C87B1 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85422D1598F009C87B1 /* URLSession.swift */; };
+		5EB8E85922D25328009C87B1 /* UpdatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		5EB8E85022D15043009C87B1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5EB8E85222D153D4009C87B1 /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		5EB8E85422D1598F009C87B1 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		5EB8E81322D13AD4009C87B1 /* Test4All */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E85722D252E6009C87B1 /* Custom */,
 				5EB8E83E22D13EBC009C87B1 /* Networking */,
 				5EB8E83B22D13DFE009C87B1 /* Extensions */,
 				5EB8E83622D13D6A009C87B1 /* MVVM-Reactive */,
@@ -197,6 +200,14 @@
 				5EB8E85022D15043009C87B1 /* Comment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5EB8E85722D252E6009C87B1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */,
 				5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */,
 				5EB8E84622D13F83009C87B1 /* TaskProtocol.swift in Sources */,
+				5EB8E85922D25328009C87B1 /* UpdatableViewController.swift in Sources */,
 				5EB8E84222D13F01009C87B1 /* NetworkingError.swift in Sources */,
 				5EB8E85122D15043009C87B1 /* Comment.swift in Sources */,
 				5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */,
