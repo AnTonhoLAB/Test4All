@@ -20,35 +20,38 @@ class ListViewModelTests: XCTestCase {
         viewModel = nil
     }
 
-    func testListNil() throws {
-        let list = viewModel.list.value
-        let tasks = try AssertNotNilAndUnwrap(list)
-        XCTAssertNil(tasks.taskIdList)
-    }
-    
     func testNetworkingState() {
-        if let state = viewModel.networkingState.value {
-            XCTAssertEqual(state, NetworkingState.default, state.id)
-        }
+        let currentState = viewModel.networkingState.value
+        XCTAssertEqual(currentState, NetworkingState.default)
     }
     
-    func testListReturn() throws {
-        
+    func testListNil() {
+        let list = viewModel.list.value
+        XCTAssertNil(list.taskIdList)
+    }
+    
+    
+    func testListNotNil() {
         viewModel.getList()
         
         let list = viewModel.list.value
-        let tasks = try AssertNotNilAndUnwrap(list)
-        let taksList = try AssertNotNilAndUnwrap(tasks.taskIdList)
-        XCTAssert(taksList.count == 4)
+        XCTAssertNotNil(list.taskIdList)
     }
     
-    func AssertNotNilAndUnwrap<T>(_ variable: T?, message: String = "Unexpected nil variable", file: StaticString = #file, line: UInt = #line) throws -> T {
-        guard let variable = variable else {
-            XCTFail(message, file: file, line: line)
-            throw UnexpectedNilError()
-        }
-        return variable
+    func testNetworkingStateSuccess() {
+        viewModel.getList()
+        let currentState = viewModel.networkingState.value
+        XCTAssertEqual(currentState, NetworkingState.success)
     }
-
-    struct UnexpectedNilError: Error {}
+    
+    func testListReturn() {
+        viewModel.getList()
+        
+        let list = viewModel.list.value
+        
+        guard let taskList = list.taskIdList else { XCTFail("Error"); return }
+        
+        XCTAssert(taskList.count == 4)
+    }
+    
 }

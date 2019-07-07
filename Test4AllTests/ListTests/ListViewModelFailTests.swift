@@ -10,24 +10,44 @@ import XCTest
 
 class ListViewModelFailTests: XCTestCase {
 
+    var viewModel: ListViewModel!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = ListViewModel(TaskProviderFailProvider())
     }
-
+    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testNetworkingState() {
+        let currentState = viewModel.networkingState.value
+        XCTAssertEqual(currentState, NetworkingState.default)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testListNil() {
+        let list = viewModel.list.value
+        XCTAssertNil(list.taskIdList)
     }
-
+    
+    
+    func testListNotNil() {
+        viewModel.getList()
+        
+        let list = viewModel.list.value
+        XCTAssertNil(list.taskIdList)
+    }
+    
+    func testNetworkingStateSuccess() {
+        viewModel.getList()
+        let currentState = viewModel.networkingState.value
+        XCTAssertEqual(currentState, NetworkingState.fail(NetworkingError.wrongRequest))
+    }
+    
+    func testListReturn() {
+        viewModel.getList()
+        
+        let list = viewModel.list.value
+        XCTAssertNil(list.taskIdList)
+    }
 }
