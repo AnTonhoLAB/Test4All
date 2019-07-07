@@ -11,6 +11,7 @@ import Foundation
 final class ListViewModel {
     
     let networkingState: Observable<NetworkingState> = Observable(.default)
+    let list: Observable<Tasks> = Observable(Tasks())
     
     private var provider: TaskProviderProtocol!
     
@@ -24,7 +25,8 @@ final class ListViewModel {
             guard let self = self else { return }
             switch result {
                 
-            case .success(_):
+            case .success(let list):
+                self.list.value = list
                 self.networkingState.value = .success
             case .failure(let error):
                 self.networkingState.value = .fail(error)
