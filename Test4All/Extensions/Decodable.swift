@@ -12,6 +12,7 @@ enum DecodeError: Error {
     case decodingError
 }
 
+// Generic decode to decode any object
 class Decode {
     static func decodeObject<T>(type: T.Type, from data: Data) throws -> T where T: Decodable  {
         let decoder = JSONDecoder()

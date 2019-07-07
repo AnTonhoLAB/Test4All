@@ -10,4 +10,6 @@ import Foundation
 
 protocol TaskProviderProtocol {
     func getList(completion: @escaping(Result<Tasks,NetworkingError>)->Void)
+    func getTask(with id: String, completion: @escaping (Result<Task, NetworkingError>) -> Void)
+    func getImageData(withLink: String, completion: @escaping (Result<Data, NetworkingError>) -> Void)
 }

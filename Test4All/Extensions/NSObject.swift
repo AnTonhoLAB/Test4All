@@ -9,6 +9,7 @@
 import Foundation
 
 extension NSObject {
+    // Func to add an observe in any NSObject class
     func observe<T>(for observable: Observable<T>, with: @escaping (T) -> ()) {
         observable.bind { observable, value  in
             DispatchQueue.main.async {

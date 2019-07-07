@@ -18,25 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let taskProvider = TaskProvider()
         
-        taskProvider.getTask(with: "1") { (res) in
-            switch res {
+        taskProvider.getImageData(withLink: "http://dev.4all.com:3003/usuario1.jpeg") { (result) in
+            switch result {
                 
-            case .success(_):
+            case .success(let data):
+                print(data)
                 break
             case .failure(_):
                 break
             }
         }
         
-        taskProvider.getList2 { (res) in
-            switch res {
-                
-            case .success(_):
-                break
-            case .failure(_):
-                break
-            }
-        }
         
         
         return true
