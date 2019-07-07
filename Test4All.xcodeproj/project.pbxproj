@@ -30,6 +30,23 @@
 		5EB8E85E22D2541B009C87B1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */; };
 		5EB8E86222D259DC009C87B1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */; };
 		5EB8E86322D259DC009C87B1 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E86122D259DC009C87B1 /* ListTableViewCell.xib */; };
+		5EB8E86622D2624D009C87B1 /* ListViewModelRightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E86522D2624D009C87B1 /* ListViewModelRightTests.swift */; };
+		5EB8E86822D2629E009C87B1 /* TaskProviderRightProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E86722D2629E009C87B1 /* TaskProviderRightProvider.swift */; };
+		5EB8E86922D262CE009C87B1 /* TaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84522D13F83009C87B1 /* TaskProtocol.swift */; };
+		5EB8E86A22D26316009C87B1 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84E22D14CEC009C87B1 /* Tasks.swift */; };
+		5EB8E86B22D26318009C87B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84C22D14C77009C87B1 /* Task.swift */; };
+		5EB8E86C22D2631B009C87B1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85022D15043009C87B1 /* Comment.swift */; };
+		5EB8E86D22D2632C009C87B1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84122D13F01009C87B1 /* NetworkingError.swift */; };
+		5EB8E86E22D2632F009C87B1 /* NetworkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83F22D13ED7009C87B1 /* NetworkingState.swift */; };
+		5EB8E86F22D26331009C87B1 /* NetworkingSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84922D1400B009C87B1 /* NetworkingSetup.swift */; };
+		5EB8E87022D26334009C87B1 /* UpdatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */; };
+		5EB8E87122D264D4009C87B1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */; };
+		5EB8E87222D26537009C87B1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83722D13D89009C87B1 /* Observable.swift */; };
+		5EB8E87322D26539009C87B1 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83922D13DAB009C87B1 /* Bindable.swift */; };
+		5EB8E87422D2653D009C87B1 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E83C22D13E21009C87B1 /* NSObject.swift */; };
+		5EB8E87522D2653F009C87B1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85222D153D4009C87B1 /* Decodable.swift */; };
+		5EB8E87922D272B0009C87B1 /* TasksProviderFailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */; };
+		5EB8E87B22D27319009C87B1 /* ListViewModelFailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +87,10 @@
 		5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		5EB8E86122D259DC009C87B1 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		5EB8E86522D2624D009C87B1 /* ListViewModelRightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelRightTests.swift; sourceTree = "<group>"; };
+		5EB8E86722D2629E009C87B1 /* TaskProviderRightProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProviderRightProvider.swift; sourceTree = "<group>"; };
+		5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksProviderFailProvider.swift; sourceTree = "<group>"; };
+		5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelFailTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +146,9 @@
 		5EB8E82822D13ADA009C87B1 /* Test4AllTests */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */,
+				5EB8E86722D2629E009C87B1 /* TaskProviderRightProvider.swift */,
+				5EB8E87622D27278009C87B1 /* ListTests */,
 				5EB8E82922D13ADA009C87B1 /* Test4AllTests.swift */,
 				5EB8E82B22D13ADA009C87B1 /* Info.plist */,
 			);
@@ -233,6 +257,15 @@
 				5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5EB8E87622D27278009C87B1 /* ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E86522D2624D009C87B1 /* ListViewModelRightTests.swift */,
+				5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */,
+			);
+			path = ListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +395,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB8E87222D26537009C87B1 /* Observable.swift in Sources */,
+				5EB8E86622D2624D009C87B1 /* ListViewModelRightTests.swift in Sources */,
 				5EB8E82A22D13ADA009C87B1 /* Test4AllTests.swift in Sources */,
+				5EB8E87122D264D4009C87B1 /* ListViewModel.swift in Sources */,
+				5EB8E86D22D2632C009C87B1 /* NetworkingError.swift in Sources */,
+				5EB8E86922D262CE009C87B1 /* TaskProtocol.swift in Sources */,
+				5EB8E86E22D2632F009C87B1 /* NetworkingState.swift in Sources */,
+				5EB8E87022D26334009C87B1 /* UpdatableViewController.swift in Sources */,
+				5EB8E87322D26539009C87B1 /* Bindable.swift in Sources */,
+				5EB8E86C22D2631B009C87B1 /* Comment.swift in Sources */,
+				5EB8E87922D272B0009C87B1 /* TasksProviderFailProvider.swift in Sources */,
+				5EB8E86A22D26316009C87B1 /* Tasks.swift in Sources */,
+				5EB8E87B22D27319009C87B1 /* ListViewModelFailTests.swift in Sources */,
+				5EB8E86B22D26318009C87B1 /* Task.swift in Sources */,
+				5EB8E87422D2653D009C87B1 /* NSObject.swift in Sources */,
+				5EB8E87522D2653F009C87B1 /* Decodable.swift in Sources */,
+				5EB8E86822D2629E009C87B1 /* TaskProviderRightProvider.swift in Sources */,
+				5EB8E86F22D26331009C87B1 /* NetworkingSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

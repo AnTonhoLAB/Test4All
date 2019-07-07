@@ -45,14 +45,13 @@ final class ListViewController: UpdatableViewController {
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let tasks = viewModel.list.value, let list = tasks.taskIdList else { return 0 }
+        guard let list = viewModel.list.value.taskIdList else { return 0 }
         print(list.count)
         return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let tasks = viewModel.list.value,
-            let list = tasks.taskIdList,
+        guard let list = viewModel.list.value.taskIdList,
             let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell else { return UITableViewCell() }
         
         cell.setup(list[indexPath.row])

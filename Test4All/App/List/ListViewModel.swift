@@ -22,10 +22,8 @@ final class ListViewModel {
     
     func getList() {
         networkingState.value = .loading
-        provider.getList {[weak self] result in
-            guard let self = self else { return }
+        provider.getList { result in
             switch result {
-                
             case .success(let list):
                 self.list.value = list
                 self.networkingState.value = .success

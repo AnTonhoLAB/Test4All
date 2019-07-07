@@ -34,7 +34,7 @@ class UpdatableViewController: UIViewController, Bindable {
         self.state = value
     }
     
-    func observingValue() -> NetworkingState? {
+    func observingValue() -> NetworkingState {
         return state
     }
     

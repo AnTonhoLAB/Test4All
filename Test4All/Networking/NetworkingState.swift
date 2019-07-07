@@ -15,6 +15,19 @@ enum NetworkingState: Equatable {
     case `default`
     
     static func == (lhs: NetworkingState, rhs: NetworkingState) -> Bool {
-        return lhs == rhs
+        return lhs.id == rhs.id
+    }
+    
+    var id: String  {
+        switch self {
+        case .loading:
+            return "loading"
+        case .success:
+            return "succees"
+        case .fail(_):
+            return "fail"
+        case .default:
+            return "default"
+        }
     }
 }
