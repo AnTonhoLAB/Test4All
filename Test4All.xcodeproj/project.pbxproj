@@ -28,6 +28,8 @@
 		5EB8E85922D25328009C87B1 /* UpdatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */; };
 		5EB8E85C22D25408009C87B1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85B22D25408009C87B1 /* ListViewController.swift */; };
 		5EB8E85E22D2541B009C87B1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */; };
+		5EB8E86222D259DC009C87B1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */; };
+		5EB8E86322D259DC009C87B1 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E86122D259DC009C87B1 /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableViewController.swift; sourceTree = "<group>"; };
 		5EB8E85B22D25408009C87B1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		5EB8E86122D259DC009C87B1 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +219,20 @@
 		5EB8E85A22D253C9009C87B1 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E85F22D259B5009C87B1 /* Cell */,
 				5EB8E85B22D25408009C87B1 /* ListViewController.swift */,
 				5EB8E85D22D2541B009C87B1 /* ListViewModel.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		5EB8E85F22D259B5009C87B1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E86122D259DC009C87B1 /* ListTableViewCell.xib */,
+				5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB8E81F22D13AD9009C87B1 /* LaunchScreen.storyboard in Resources */,
+				5EB8E86322D259DC009C87B1 /* ListTableViewCell.xib in Resources */,
 				5EB8E81C22D13AD9009C87B1 /* Assets.xcassets in Resources */,
 				5EB8E81A22D13AD4009C87B1 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +342,7 @@
 				5EB8E84822D13FAF009C87B1 /* TaskProvider.swift in Sources */,
 				5EB8E85322D153D4009C87B1 /* Decodable.swift in Sources */,
 				5EB8E83822D13D89009C87B1 /* Observable.swift in Sources */,
+				5EB8E86222D259DC009C87B1 /* ListTableViewCell.swift in Sources */,
 				5EB8E84F22D14CEC009C87B1 /* Tasks.swift in Sources */,
 				5EB8E84D22D14C77009C87B1 /* Task.swift in Sources */,
 				5EB8E84622D13F83009C87B1 /* TaskProtocol.swift in Sources */,

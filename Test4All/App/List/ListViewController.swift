@@ -13,6 +13,7 @@ final class ListViewController: UpdatableViewController {
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
+            tableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
             tableView.dataSource = self
             tableView.tableFooterView = UIView()
         }
@@ -39,10 +40,6 @@ final class ListViewController: UpdatableViewController {
         super.viewDidAppear(animated)
         viewModel.getList()
     }
-    // MARK: - Actions
-    
-    // MARK: - Functions
-    
 }
 
 extension ListViewController: UITableViewDataSource {
@@ -53,24 +50,12 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let tasks = viewModel.list.value, let list = tasks.taskIdList else { return UITableViewCell() }
+        guard let tasks = viewModel.list.value,
+            let list = tasks.taskIdList,
+            let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell else { return UITableViewCell() }
         
-        let cell = UITableViewCell()
-        cell.textLabel?.text = list[indexPath.row]
+        cell.setup(list[indexPath.row])
         
         return cell
-    }
-}
-
-
-extension UITextField : Bindable {
-    public typealias BindingType = String
-    
-    public func observingValue() -> String? {
-        return self.text
-    }
-    
-    public func updateValue(with value: String) {
-        self.text = value
     }
 }
