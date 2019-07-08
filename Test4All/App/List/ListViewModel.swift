@@ -32,5 +32,9 @@ final class ListViewModel {
             }
         }
     }
+    
+    func getDetailViewModel(with id: String) -> DetailViewModel {
+        return DetailViewModel(self.provider, id)
+    }
 }
 

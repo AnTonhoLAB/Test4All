@@ -15,11 +15,13 @@ final class ListViewController: UpdatableViewController {
         didSet {
             tableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
             tableView.dataSource = self
+            tableView.delegate = self
             tableView.tableFooterView = UIView()
         }
     }
     
     // MARK: - Constants
+    private let segueListToDetail = "listToDetail"
     let viewModel: ListViewModel! = ListViewModel(TaskProvider())
     
     // MARK: - Variables
@@ -37,9 +39,18 @@ final class ListViewController: UpdatableViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         viewModel.getList()
+    }
+    
+    // MARK: Functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let target = segue.destination as? DetailViewController,
+        let id = sender as? String else { return }
+        
+        target.viewModel = viewModel.getDetailViewModel(with: id)
     }
 }
 
@@ -57,5 +68,11 @@ extension ListViewController: UITableViewDataSource {
         cell.setup(list[indexPath.row])
         
         return cell
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueListToDetail, sender: indexPath.row)
     }
 }

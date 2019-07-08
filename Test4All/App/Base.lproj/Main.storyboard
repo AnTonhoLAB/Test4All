@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="CzO-Oc-JL6"/>
                     <connections>
                         <outlet property="tableView" destination="T5n-4d-JXx" id="HSv-fQ-NS1"/>
-                        <segue destination="Udb-N2-xem" kind="show" identifier="toDetail" id="b3n-cJ-Wqy"/>
+                        <segue destination="Udb-N2-xem" kind="show" identifier="listToDetail" id="b3n-cJ-Wqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
