@@ -22,5 +22,6 @@ class Decode {
         } catch {
             throw DecodeError.decodingError
         }
+        
     }
 }
