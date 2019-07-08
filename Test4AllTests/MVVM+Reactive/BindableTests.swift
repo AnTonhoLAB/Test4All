@@ -30,8 +30,6 @@ class BindableTests: XCTestCase {
         XCTAssert(vcBindable.observingValue() == .fail(NetworkingError.urlBuildingError))
         vcBindable.updateValue(with: .default)
         XCTAssert(vcBindable.observingValue() == .default)
-        
-        
     }
     
     func testBindValue() {
