@@ -8,16 +8,36 @@
 
 import Foundation
 
+protocol Credentiable {
+    var url: String { get }
+    var basePath: String { get }
+    var task: String { get }
+    var idToSend: String { get }
+}
+
+struct Credentials: Credentiable {
+    var url = "http://dev.4all.com"
+    var basePath = ":3003"
+    var task = "/tarefa"
+    var idToSend = "/%@"
+}
+
 final class TaskProvider: TaskProviderProtocol {
-    private let url = "http://dev.4all.com"
-    private let basePath = ":3003"
-    private let task = "/tarefa"
-    private let idToSend = "/%@"
+    
+    private var credentials: Credentiable!
+    
+    init(_ credentials: Credentiable?) {
+        if let credentials = credentials {
+            self.credentials = credentials
+        } else {
+            self.credentials = Credentials()
+        }
+    }
     
     // Get list to show in list screen
     func getList(completion: @escaping (Result<Tasks, NetworkingError>) -> Void) {
         
-        guard let url =  URL(string: url + basePath + task) else {
+        guard let url =  URL(string: credentials.url + credentials.basePath + credentials.task) else {
             completion(.failure(.urlBuildingError))
             return
         }
@@ -39,8 +59,8 @@ final class TaskProvider: TaskProviderProtocol {
     
     // Get a specific task from list in getList function
     func getTask(with id: String, completion: @escaping (Result<Task, NetworkingError>) -> Void) {
-        let idEndPoint =  String(format: idToSend, id)
-        guard let url =  URL(string: url + basePath + task + idEndPoint) else {
+        let idEndPoint =  String(format: credentials.idToSend, id)
+        guard let url =  URL(string: credentials.url + credentials.basePath + credentials.task + idEndPoint) else {
             completion(.failure(.urlBuildingError))
             return
         }

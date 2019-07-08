@@ -22,7 +22,7 @@ final class ListViewController: UpdatableViewController {
     
     // MARK: - Constants
     private let segueListToDetail = "listToDetail"
-    let viewModel: ListViewModel! = ListViewModel(TaskProvider())
+    let viewModel: ListViewModel! = ListViewModel(TaskProvider(nil))
     
     // MARK: - Variables
     
