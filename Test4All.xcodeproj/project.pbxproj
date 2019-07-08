@@ -10,8 +10,16 @@
 		5E45720522D2B15200871950 /* DecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45720422D2B15200871950 /* DecodeTests.swift */; };
 		5E45720922D2B28E00871950 /* Task.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E45720822D2B28E00871950 /* Task.json */; };
 		5E45720A22D2B57800871950 /* Task.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E45720822D2B28E00871950 /* Task.json */; };
+		5E560CC822D394DB003C0281 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E560CC722D394DB003C0281 /* ObservableTests.swift */; };
+		5E560CCA22D39711003C0281 /* BindableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E560CC922D39711003C0281 /* BindableTests.swift */; };
+		5E560CCB22D39AB2003C0281 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85B22D25408009C87B1 /* ListViewController.swift */; };
+		5E560CCC22D39AFF003C0281 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A441622D2C63700911428 /* DetailViewController.swift */; };
+		5E560CCD22D39B05003C0281 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E86022D259DC009C87B1 /* ListTableViewCell.swift */; };
+		5E560CCE22D39B3E003C0281 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E84722D13FAF009C87B1 /* TaskProvider.swift */; };
+		5E560CCF22D39B50003C0281 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85422D1598F009C87B1 /* URLSession.swift */; };
 		5E5A441722D2C63700911428 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A441622D2C63700911428 /* DetailViewController.swift */; };
 		5E5A441922D2C64700911428 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A441822D2C64700911428 /* DetailViewModel.swift */; };
+		5E6C3B6222D391A600CE9D8A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A441822D2C64700911428 /* DetailViewModel.swift */; };
 		5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E81422D13AD4009C87B1 /* AppDelegate.swift */; };
 		5EB8E81A22D13AD4009C87B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E81822D13AD4009C87B1 /* Main.storyboard */; };
 		5EB8E81C22D13AD9009C87B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E81B22D13AD9009C87B1 /* Assets.xcassets */; };
@@ -66,6 +74,8 @@
 /* Begin PBXFileReference section */
 		5E45720422D2B15200871950 /* DecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeTests.swift; sourceTree = "<group>"; };
 		5E45720822D2B28E00871950 /* Task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Task.json; sourceTree = "<group>"; };
+		5E560CC722D394DB003C0281 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
+		5E560CC922D39711003C0281 /* BindableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTests.swift; sourceTree = "<group>"; };
 		5E5A441622D2C63700911428 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5E5A441822D2C64700911428 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5EB8E81122D13AD4009C87B1 /* Test4All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test4All.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +146,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		5E6C3B6322D3947300CE9D8A /* MVVM+Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				5E560CC722D394DB003C0281 /* ObservableTests.swift */,
+				5E560CC922D39711003C0281 /* BindableTests.swift */,
+			);
+			path = "MVVM+Reactive";
+			sourceTree = "<group>";
+		};
 		5EB8E80822D13AD4009C87B1 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +194,7 @@
 				5EB8E86722D2629E009C87B1 /* TaskProviderRightProvider.swift */,
 				5EB8E87622D27278009C87B1 /* ListTests */,
 				5E45720622D2B1F900871950 /* Decode */,
+				5E6C3B6322D3947300CE9D8A /* MVVM+Reactive */,
 				5EB8E82B22D13ADA009C87B1 /* Info.plist */,
 			);
 			path = Test4AllTests;
@@ -425,24 +445,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E560CCE22D39B3E003C0281 /* TaskProvider.swift in Sources */,
 				5EB8E87222D26537009C87B1 /* Observable.swift in Sources */,
 				5EB8E86622D2624D009C87B1 /* ListViewModelRightTests.swift in Sources */,
+				5E560CCC22D39AFF003C0281 /* DetailViewController.swift in Sources */,
 				5EB8E87122D264D4009C87B1 /* ListViewModel.swift in Sources */,
 				5EB8E86D22D2632C009C87B1 /* NetworkingError.swift in Sources */,
 				5EB8E86922D262CE009C87B1 /* TaskProtocol.swift in Sources */,
 				5EB8E86E22D2632F009C87B1 /* NetworkingState.swift in Sources */,
+				5E560CCF22D39B50003C0281 /* URLSession.swift in Sources */,
 				5EB8E87022D26334009C87B1 /* UpdatableViewController.swift in Sources */,
+				5E6C3B6222D391A600CE9D8A /* DetailViewModel.swift in Sources */,
 				5EB8E87322D26539009C87B1 /* Bindable.swift in Sources */,
 				5EB8E86C22D2631B009C87B1 /* Comment.swift in Sources */,
+				5E560CC822D394DB003C0281 /* ObservableTests.swift in Sources */,
 				5EB8E87922D272B0009C87B1 /* TasksProviderFailProvider.swift in Sources */,
 				5EB8E86A22D26316009C87B1 /* Tasks.swift in Sources */,
 				5E45720522D2B15200871950 /* DecodeTests.swift in Sources */,
 				5EB8E87B22D27319009C87B1 /* ListViewModelFailTests.swift in Sources */,
 				5EB8E86B22D26318009C87B1 /* Task.swift in Sources */,
+				5E560CCD22D39B05003C0281 /* ListTableViewCell.swift in Sources */,
+				5E560CCB22D39AB2003C0281 /* ListViewController.swift in Sources */,
 				5EB8E87422D2653D009C87B1 /* NSObject.swift in Sources */,
 				5EB8E87522D2653F009C87B1 /* Decodable.swift in Sources */,
 				5EB8E86822D2629E009C87B1 /* TaskProviderRightProvider.swift in Sources */,
 				5EB8E86F22D26331009C87B1 /* NetworkingSetup.swift in Sources */,
+				5E560CCA22D39711003C0281 /* BindableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
