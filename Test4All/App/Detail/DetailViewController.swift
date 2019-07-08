@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UpdatableViewController {
     
     // MARK: - Outlets
     
@@ -21,7 +21,25 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let viewModel = viewModel else { return }
+        
+        self.title = viewModel.title
+        self.bind(with: viewModel.networkingState)
+        
+//        viewModel.list.bind { _, _ in
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let viewModel = viewModel else { return }
+        
+        viewModel.getTask()
+    }
+    
     
     // MARK: - Actions
     

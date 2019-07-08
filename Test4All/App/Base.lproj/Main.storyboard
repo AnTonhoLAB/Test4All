@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="1088" y="-654"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Y9Z-cA-tHd">
             <objects>
-                <viewController id="Udb-N2-xem" sceneMemberID="viewController">
+                <viewController id="Udb-N2-xem" customClass="DetailViewController" customModule="Test4All" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4G-Z6-CYX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

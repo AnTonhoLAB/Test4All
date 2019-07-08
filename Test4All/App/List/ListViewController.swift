@@ -29,7 +29,6 @@ final class ListViewController: UpdatableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.title
         self.bind(with: viewModel.networkingState)
         
         viewModel.list.bind { _, _ in
@@ -41,14 +40,19 @@ final class ListViewController: UpdatableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.title = viewModel.title
         viewModel.getList()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
     }
     
     // MARK: Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let target = segue.destination as? DetailViewController,
-        let id = sender as? String else { return }
+        let id = sender as? Int else { return }
         
         target.viewModel = viewModel.getDetailViewModel(with: id)
     }

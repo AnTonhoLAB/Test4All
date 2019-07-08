@@ -33,8 +33,9 @@ final class ListViewModel {
         }
     }
     
-    func getDetailViewModel(with id: String) -> DetailViewModel {
-        return DetailViewModel(self.provider, id)
+    func getDetailViewModel(with id: Int) -> DetailViewModel? {
+        guard let task = list.value.taskIdList else { return nil}
+        return DetailViewModel(self.provider, task[id])
     }
 }
 
