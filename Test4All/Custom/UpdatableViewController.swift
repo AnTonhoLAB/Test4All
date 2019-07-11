@@ -38,6 +38,8 @@ class UpdatableViewController: UIViewController, Bindable {
         return state
     }
     
+    
+    
 }
 
 extension UpdatableViewController {

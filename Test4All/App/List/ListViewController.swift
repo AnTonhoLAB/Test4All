@@ -15,19 +15,20 @@ final class ListViewController: UpdatableViewController {
         didSet {
             tableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
             tableView.dataSource = self
+            tableView.delegate = self
             tableView.tableFooterView = UIView()
         }
     }
     
     // MARK: - Constants
-    let viewModel: ListViewModel! = ListViewModel(TaskProvider())
+    private let segueListToDetail = "listToDetail"
+    let viewModel: ListViewModel! = ListViewModel(TaskProvider(nil))
     
     // MARK: - Variables
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.title
         self.bind(with: viewModel.networkingState)
         
         viewModel.list.bind { _, _ in
@@ -37,16 +38,29 @@ final class ListViewController: UpdatableViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = viewModel.title
         viewModel.getList()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
+    }
+    
+    // MARK: Functions
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let target = segue.destination as? DetailViewController,
+        let id = sender as? Int else { return }
+        
+        target.viewModel = viewModel.getDetailViewModel(with: id)
     }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let list = viewModel.list.value.taskIdList else { return 0 }
-        print(list.count)
         return list.count
     }
     
@@ -57,5 +71,11 @@ extension ListViewController: UITableViewDataSource {
         cell.setup(list[indexPath.row])
         
         return cell
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueListToDetail, sender: indexPath.row)
     }
 }

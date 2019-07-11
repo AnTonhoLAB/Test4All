@@ -20,6 +20,7 @@ struct Task: Codable {
     var address: String?
     var latitude: Double?
     var longitude: Double?
+    var comments: [Comment]?
 
     public enum CodingKeys: String, CodingKey {
         case id 
@@ -33,6 +34,7 @@ struct Task: Codable {
         case address = "endereco"
         case latitude
         case longitude
+        case comments = "comentarios"
     }
 
 //    "id":"1",
