@@ -65,6 +65,7 @@
 		5EB8E87522D2653F009C87B1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E85222D153D4009C87B1 /* Decodable.swift */; };
 		5EB8E87922D272B0009C87B1 /* TasksProviderFailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */; };
 		5EB8E87B22D27319009C87B1 /* ListViewModelFailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */; };
+		5EBA9AAA22D6D96F00AD233C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA9AA922D6D96F00AD233C /* UIViewController.swift */; };
 		ED6F2F3F5448F15A84743C27 /* Pods_Test4AllTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F491A77E96AF2D4F14031D2 /* Pods_Test4AllTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		5EB8E86722D2629E009C87B1 /* TaskProviderRightProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProviderRightProvider.swift; sourceTree = "<group>"; };
 		5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksProviderFailProvider.swift; sourceTree = "<group>"; };
 		5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelFailTests.swift; sourceTree = "<group>"; };
+		5EBA9AA922D6D96F00AD233C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		70B40784D1F4F69B482C76C0 /* Pods-Test4All.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4All.debug.xcconfig"; path = "Target Support Files/Pods-Test4All/Pods-Test4All.debug.xcconfig"; sourceTree = "<group>"; };
 		8B40EACB79E96FE19082F51B /* Pods-Test4AllTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4AllTests.release.xcconfig"; path = "Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D9F206559FB70DD721526CE /* Pods-Test4AllTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4AllTests.debug.xcconfig"; path = "Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				5EB8E83C22D13E21009C87B1 /* NSObject.swift */,
 				5EB8E85222D153D4009C87B1 /* Decodable.swift */,
 				5EB8E85422D1598F009C87B1 /* URLSession.swift */,
+				5EBA9AA922D6D96F00AD233C /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,7 +391,6 @@
 				5EB8E80D22D13AD4009C87B1 /* Sources */,
 				5EB8E80E22D13AD4009C87B1 /* Frameworks */,
 				5EB8E80F22D13AD4009C87B1 /* Resources */,
-				84F271CCB63D1561D40346F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,7 +409,7 @@
 				5EB8E82122D13ADA009C87B1 /* Sources */,
 				5EB8E82222D13ADA009C87B1 /* Frameworks */,
 				5EB8E82322D13ADA009C87B1 /* Resources */,
-				34988C4E826069FCECA31A04 /* [CP] Embed Pods Frameworks */,
+				718F3093AB7C1D0FFFCAD183 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -504,23 +506,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		34988C4E826069FCECA31A04 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4D0E41B3EBC6C0CCE0BBFDA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,21 +528,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		84F271CCB63D1561D40346F8 /* [CP] Embed Pods Frameworks */ = {
+		718F3093AB7C1D0FFFCAD183 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test4All/Pods-Test4All-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test4All/Pods-Test4All-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test4All/Pods-Test4All-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -581,6 +566,7 @@
 				5E5A441722D2C63700911428 /* DetailViewController.swift in Sources */,
 				5EB8E84222D13F01009C87B1 /* NetworkingError.swift in Sources */,
 				5EB8E85122D15043009C87B1 /* Comment.swift in Sources */,
+				5EBA9AAA22D6D96F00AD233C /* UIViewController.swift in Sources */,
 				5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */,
 				5EB8E83A22D13DAB009C87B1 /* Bindable.swift in Sources */,
 				5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */,

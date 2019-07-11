@@ -61,7 +61,6 @@ final class ListViewController: UpdatableViewController {
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let list = viewModel.list.value.taskIdList else { return 0 }
-        print(list.count)
         return list.count
     }
     

@@ -6,7 +6,7 @@ target 'Test4All' do
   use_frameworks!
 
   # Pods for Test4All
-	pod 'Mockingjay'
+
   target 'Test4AllTests' do
     inherit! :search_paths
     # Pods for testing
