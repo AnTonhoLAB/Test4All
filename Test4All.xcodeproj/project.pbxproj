@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A48E88A8040C1BC1B447329 /* Pods_Test4All.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE76400DB90ADD65F5448C39 /* Pods_Test4All.framework */; };
+		5E087F3D22D7A96C00302531 /* BindablesObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087F3C22D7A96C00302531 /* BindablesObjects.swift */; };
 		5E45720522D2B15200871950 /* DecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45720422D2B15200871950 /* DecodeTests.swift */; };
 		5E45720922D2B28E00871950 /* Task.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E45720822D2B28E00871950 /* Task.json */; };
 		5E45720A22D2B57800871950 /* Task.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E45720822D2B28E00871950 /* Task.json */; };
@@ -83,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		3F491A77E96AF2D4F14031D2 /* Pods_Test4AllTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test4AllTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E087F3C22D7A96C00302531 /* BindablesObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindablesObjects.swift; sourceTree = "<group>"; };
 		5E45720422D2B15200871950 /* DecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeTests.swift; sourceTree = "<group>"; };
 		5E45720822D2B28E00871950 /* Task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Task.json; sourceTree = "<group>"; };
 		5E50FA4D22D3E7FA007F5B78 /* TaskProviderFailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProviderFailTests.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				5EB8E85822D25328009C87B1 /* UpdatableViewController.swift */,
+				5E087F3C22D7A96C00302531 /* BindablesObjects.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				5EBA9AAA22D6D96F00AD233C /* UIViewController.swift in Sources */,
 				5EB8E83D22D13E21009C87B1 /* NSObject.swift in Sources */,
 				5EB8E83A22D13DAB009C87B1 /* Bindable.swift in Sources */,
+				5E087F3D22D7A96C00302531 /* BindablesObjects.swift in Sources */,
 				5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */,
 				5EB8E85C22D25408009C87B1 /* ListViewController.swift in Sources */,
 				5EB8E84A22D1400B009C87B1 /* NetworkingSetup.swift in Sources */,

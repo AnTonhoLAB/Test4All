@@ -103,7 +103,6 @@ class DetailViewController: UpdatableViewController {
             for comment in comments {
                 let commentView = CommentView(with: comment, provider: TaskProvider(nil))
                 self.stackView.addArrangedSubview(commentView)
-//                commentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 160).isActive = true
             }
             self.view.layoutSubviews()
         }
@@ -121,42 +120,3 @@ extension UILabel: Bindable {
         self.text = value
     }
 }
-
-extension UIImageView: Bindable {
-    public typealias BindingType = Data
-    
-    public func observingValue() -> Data {
-        return (self.image?.pngData()!)!
-    }
-    
-    public func updateValue(with value: Data) {
-        self.image = UIImage(data: value)
-    }
-}
-
-extension MKMapView: Bindable {
-    
-    public typealias BindingType = CLLocation
-    
-    public func observingValue() -> CLLocation {
-        return CLLocation()
-    }
-    
-    public func updateValue(with value: CLLocation) {
-        self.centerMapOnLocation(location: value)
-    }
-    
-    func centerMapOnLocation(location: CLLocation) {
-        
-        let regionRadius: CLLocationDistance = 1000
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        self.setRegion(coordinateRegion, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location.coordinate
-        self.addAnnotation(annotation)
-    }
-}
-
-
