@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 class DetailViewModel {
     
@@ -28,6 +29,7 @@ class DetailViewModel {
     let taskTitle = Observable<String>("")
     let photo = Observable<Data>(Data())
     let logo = Observable<Data>(Data())
+    let location = Observable<CLLocation>(CLLocation())
     
     
     let comments = Observable<[Comment]>([Comment]())
@@ -53,7 +55,11 @@ class DetailViewModel {
                 self.photoUrl.value = task.urlPhoto ?? ""
                 self.logoUrl.value = task.urlLogo ?? ""
                 self.loadImages()
-            case .failure(let err):
+                if let longitude = task.longitude, let latitude = task.latitude {
+                    self.location.value = CLLocation(latitude: latitude, longitude: longitude)
+                    
+                }
+                case .failure(let err):
                 self.networkingState.value = .fail(err)
             }
         }

@@ -66,6 +66,8 @@
 		5EB8E87922D272B0009C87B1 /* TasksProviderFailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */; };
 		5EB8E87B22D27319009C87B1 /* ListViewModelFailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */; };
 		5EBA9AAA22D6D96F00AD233C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA9AA922D6D96F00AD233C /* UIViewController.swift */; };
+		5EC2C40D22D78C0A0077DFCA /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2C40C22D78C0A0077DFCA /* CommentView.xib */; };
+		5EC2C41022D78C700077DFCA /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2C40F22D78C700077DFCA /* CommentView.swift */; };
 		ED6F2F3F5448F15A84743C27 /* Pods_Test4AllTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F491A77E96AF2D4F14031D2 /* Pods_Test4AllTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,8 @@
 		5EB8E87822D272B0009C87B1 /* TasksProviderFailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksProviderFailProvider.swift; sourceTree = "<group>"; };
 		5EB8E87A22D27318009C87B1 /* ListViewModelFailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelFailTests.swift; sourceTree = "<group>"; };
 		5EBA9AA922D6D96F00AD233C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5EC2C40C22D78C0A0077DFCA /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		5EC2C40F22D78C700077DFCA /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		70B40784D1F4F69B482C76C0 /* Pods-Test4All.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4All.debug.xcconfig"; path = "Target Support Files/Pods-Test4All/Pods-Test4All.debug.xcconfig"; sourceTree = "<group>"; };
 		8B40EACB79E96FE19082F51B /* Pods-Test4AllTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4AllTests.release.xcconfig"; path = "Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D9F206559FB70DD721526CE /* Pods-Test4AllTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test4AllTests.debug.xcconfig"; path = "Target Support Files/Pods-Test4AllTests/Pods-Test4AllTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		5E5A441522D2C5C800911428 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				5EC2C40E22D78C1B0077DFCA /* CommentView */,
 				5E5A441622D2C63700911428 /* DetailViewController.swift */,
 				5E5A441822D2C64700911428 /* DetailViewModel.swift */,
 			);
@@ -369,6 +374,15 @@
 			path = ListTests;
 			sourceTree = "<group>";
 		};
+		5EC2C40E22D78C1B0077DFCA /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				5EC2C40C22D78C0A0077DFCA /* CommentView.xib */,
+				5EC2C40F22D78C700077DFCA /* CommentView.swift */,
+			);
+			path = CommentView;
+			sourceTree = "<group>";
+		};
 		AD839E1B7FB9B2910FB77126 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +482,7 @@
 				5EB8E86322D259DC009C87B1 /* ListTableViewCell.xib in Resources */,
 				5EB8E81C22D13AD9009C87B1 /* Assets.xcassets in Resources */,
 				5EB8E81A22D13AD4009C87B1 /* Main.storyboard in Resources */,
+				5EC2C40D22D78C0A0077DFCA /* CommentView.xib in Resources */,
 				5E45720A22D2B57800871950 /* Task.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +587,7 @@
 				5EB8E81522D13AD4009C87B1 /* AppDelegate.swift in Sources */,
 				5EB8E85C22D25408009C87B1 /* ListViewController.swift in Sources */,
 				5EB8E84A22D1400B009C87B1 /* NetworkingSetup.swift in Sources */,
+				5EC2C41022D78C700077DFCA /* CommentView.swift in Sources */,
 				5EB8E85E22D2541B009C87B1 /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

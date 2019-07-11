@@ -81,9 +81,9 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vbJ-KC-F18">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="412.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="512.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-6o-yTu">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-6o-yTu">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="238.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="zpE-6o-yTu" secondAttribute="height" multiplier="11:7" id="RMt-Zx-xla"/>
@@ -92,7 +92,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaw-Za-KyR">
                                                 <rect key="frame" x="0.0" y="238.5" width="375" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Adf-MX-5gR">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Adf-MX-5gR">
                                                         <rect key="frame" x="255" y="-58" width="90" height="90"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -270,6 +270,12 @@
                                                     <constraint firstItem="HyA-Aj-Ra2" firstAttribute="leading" secondItem="QE6-QH-Vo1" secondAttribute="leading" constant="20" id="jUC-8e-hTa"/>
                                                 </constraints>
                                             </view>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w5s-KB-nQI">
+                                                <rect key="frame" x="0.0" y="412.5" width="375" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="KgD-kx-121"/>
+                                                </constraints>
+                                            </mapView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -295,7 +301,9 @@
                         <outlet property="avatarImage" destination="Adf-MX-5gR" id="zxP-cF-upy"/>
                         <outlet property="backGroundImage" destination="zpE-6o-yTu" id="19c-7I-L2g"/>
                         <outlet property="descriptionText" destination="Xtn-UD-Hcq" id="e11-YS-Mqe"/>
+                        <outlet property="map" destination="w5s-KB-nQI" id="D1C-KU-zKr"/>
                         <outlet property="scrollView" destination="REx-zI-Wwq" id="PZb-2A-Bf4"/>
+                        <outlet property="stackView" destination="vbJ-KC-F18" id="edc-Gz-u5B"/>
                         <outlet property="titleLabel" destination="bdu-Sv-FbF" id="McM-me-RAD"/>
                         <segue destination="van-Aq-qBd" kind="show" identifier="toServices" id="xHW-PK-LuW"/>
                     </connections>
@@ -332,12 +340,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Avatar" width="100" height="100"/>
-        <image name="Background" width="525.5" height="343"/>
         <image name="Ballon" width="50" height="50"/>
         <image name="Diamond" width="50" height="50"/>
         <image name="Phone" width="50" height="50"/>
         <image name="Pin" width="50" height="50"/>
         <image name="Star" width="50" height="50"/>
+        <image name="bgPlaceholder" width="500" height="337.5"/>
+        <image name="logoPlaceholder" width="512" height="512"/>
     </resources>
 </document>

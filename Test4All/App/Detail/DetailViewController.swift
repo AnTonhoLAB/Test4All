@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailViewController: UpdatableViewController {
     
@@ -16,6 +17,7 @@ class DetailViewController: UpdatableViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var backGroundImage: UIImageView!
     @IBOutlet private weak var avatarImage: UIImageView! {
         didSet {
@@ -25,6 +27,7 @@ class DetailViewController: UpdatableViewController {
     }
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionText: UILabel!
+    @IBOutlet private weak var map: MKMapView!
     
     // MARK: - Constants
     var viewModel: DetailViewModel?
@@ -45,6 +48,11 @@ class DetailViewController: UpdatableViewController {
         descriptionText.bind(with: viewModel.description)
         titleLabel.bind(with: viewModel.taskTitle)
         
+        map.bind(with: viewModel.location)
+
+        viewModel.comments.bind { (_, comments) in
+            self.setup(comments: comments)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,10 +66,7 @@ class DetailViewController: UpdatableViewController {
     @IBAction func didTaPhone(_ sender: Any) {
         guard let viewModel = viewModel else { return }
         let number = viewModel.phone.value
-        alertMessage("Ligar para: \(number)?", action: { _ in
-            UIApplication.shared.open(URL(string: "tel://\(number)")!)
-        }, with: true)
-        
+        UIApplication.shared.open(URL(string: "tel://\(number)")!)
     }
     
     @IBAction func didTapServices(_ sender: Any) {
@@ -83,11 +88,21 @@ class DetailViewController: UpdatableViewController {
     @IBAction func didTapFavorites(_ sender: Any) {
         
     }
+
     // MARK: - Functions
-    
+    private func setup(comments: [Comment]) {
+        DispatchQueue.main.async {
+            for comment in comments {
+                let commentView = CommentView(with: comment, provider: TaskProvider(nil))
+                self.stackView.addArrangedSubview(commentView)
+//                commentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 160).isActive = true
+            }
+            self.view.layoutSubviews()
+        }
+    }
 }
 
-extension UILabel : Bindable {
+extension UILabel: Bindable {
     public typealias BindingType = String
     
     public func observingValue() -> String {
@@ -99,7 +114,7 @@ extension UILabel : Bindable {
     }
 }
 
-extension UIImageView : Bindable {
+extension UIImageView: Bindable {
     public typealias BindingType = Data
     
     public func observingValue() -> Data {
@@ -110,3 +125,30 @@ extension UIImageView : Bindable {
         self.image = UIImage(data: value)
     }
 }
+
+extension MKMapView: Bindable {
+    
+    public typealias BindingType = CLLocation
+    
+    public func observingValue() -> CLLocation {
+        return CLLocation()
+    }
+    
+    public func updateValue(with value: CLLocation) {
+        self.centerMapOnLocation(location: value)
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        
+        let regionRadius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        self.setRegion(coordinateRegion, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location.coordinate
+        self.addAnnotation(annotation)
+    }
+}
+
+
