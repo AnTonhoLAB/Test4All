@@ -1,0 +1,29 @@
+{
+    "id":"1",
+    "cidade":"Porto Alegre",
+    "bairro":"Moinhos de Vento",
+    "urlFoto":"http://dev.4all.com:3003/foto_01.jpg",
+    "urlLogo":"http://dev.4all.com:3003/logo_01.png",
+    "titulo":"Lorem Ipsum",
+    "telefone":"5122333311",
+    "texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus consequat nulla, a laoreet ipsum blandit ac. Donec vitae convallis nisi. Mauris molestie id lorem quis dignissim. Cum sociis natoque penatibus et magnis dis parturient montes.",
+    "endereco":"Avenida Carlos Gomes, 532",
+    "latitude":-30.0306551,
+    "longitude":-51.1846846,
+    "comentarios":[
+        {
+            "urlFoto":"http://dev.4all.com:3003/usuario1.jpeg",
+            "nome":"Lorem Ipsum",
+            "nota":2,
+            "titulo":"Consequat Nulla",
+            "comentario":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus consequat nulla, a laoreet ipsum blandit ac. Donec vitae convallis nisi."
+        },
+        {
+            "urlFoto":"http://dev.4all.com:3003/usuario2.jpeg",
+            "nome":"Mauris Molestie",
+            "nota":5,
+            "titulo":"finibus consequat",
+            "comentario":"Aliquam eu lacinia justo. Aliquam a arcu nibh. Integer tincidunt nisi ac nibh posuere, in finibus turpis eleifend. Duis augue mauris, scelerisque non sem a, dictum volutpat urna."
+        }
+    ]
+}
