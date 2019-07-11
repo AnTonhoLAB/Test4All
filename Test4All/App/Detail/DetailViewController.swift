@@ -28,6 +28,13 @@ class DetailViewController: UpdatableViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionText: UILabel!
     @IBOutlet private weak var map: MKMapView!
+    @IBOutlet private weak var addressMapLabel: UILabel!
+    @IBOutlet private weak var pinMapImage: UIImageView! {
+        didSet {
+            pinMapImage.layer.cornerRadius = pinMapImage.frame.size.width / 2
+            pinMapImage.clipsToBounds = true
+        }
+    }
     
     // MARK: - Constants
     var viewModel: DetailViewModel?
@@ -49,7 +56,8 @@ class DetailViewController: UpdatableViewController {
         titleLabel.bind(with: viewModel.taskTitle)
         
         map.bind(with: viewModel.location)
-
+        addressMapLabel.bind(with: viewModel.address)
+        
         viewModel.comments.bind { (_, comments) in
             self.setup(comments: comments)
         }
