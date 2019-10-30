@@ -1,12 +1,40 @@
 name: Swift
 
-on: [push]
+#on: [push]
+#
+#jobs:
+#  build:
+#
+#    runs-on: macOS-latest
+#
+#    strategy:
+#        matrix:
+#          destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@master
+#      - name: Build
+#        run: |
+#          xcodebuild clean build -project Test4All.xcworkspace -scheme Test4All -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+#        env:
+#         destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
+#    - name: Install Pods
+#      run: pod install
+#    - name: Build
+#      run: swift build -v
+#    - name: Run tests
+#      run: swift test -v
 
+
+on:
+  push:
+    branches:
+      - master
+name: Build
 jobs:
-  build:
-
+  test:
+    name: Build
     runs-on: macOS-latest
-
     strategy:
         matrix:
           destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
@@ -15,12 +43,6 @@ jobs:
         uses: actions/checkout@master
       - name: Build
         run: |
-          xcodebuild clean build -project Test4All.xcworkspace -scheme Test4All -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+            xcodebuild clean build -project Test4All.xcworkspace -scheme Test4All -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
-         destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
-    - name: Install Pods
-      run: pod install
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+         destination: ${{ matrix.destination }}
