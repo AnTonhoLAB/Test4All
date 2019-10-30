@@ -17,7 +17,7 @@ jobs:
         run: |
           xcodebuild clean build -project Test4All.xcworkspace -scheme Test4All -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
-         destination: ${{ matrix.destination }}
+         destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
     - name: Install Pods
       run: pod install
     - name: Build
