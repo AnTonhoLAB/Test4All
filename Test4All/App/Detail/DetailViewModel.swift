@@ -17,7 +17,7 @@ class DetailViewModel {
     let title = ""
     let networkingState: Observable<NetworkingState> = Observable(.default)
     
-    private let task = Observable<Task>(Task())
+    let task = Observable<Task>(Task())
     private let photoUrl = Observable<String>("")
     private let logoUrl = Observable<String>("")
     
