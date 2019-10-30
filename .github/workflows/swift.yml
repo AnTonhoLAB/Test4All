@@ -28,7 +28,7 @@ name: Swift
 
 on:
   push:
-    branches:
+    branches:    
       - master
 name: Build
 jobs:
