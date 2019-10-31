@@ -15,6 +15,10 @@ jobs:
         uses: actions/checkout@master
       - name: Build
         run: |
-            xcodebuild -workspace Test4All.xcworkspace -scheme Test4All -destination "platform=iOS Simulator, OS=12.4, name=iPhone 6s" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+            xcodebuild \
+            -workspace Test4All.xcworkspace \
+            -scheme Test4All \
+            -destination 'platform=iOS,id=5E0BE22C-A4F0-4CCF-A869-4C2E71F33844' \
+            clean test
         env:
          destination: ${{ matrix.destination }}
