@@ -13,10 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: PodInstall
+      - name: Remove pods
         run: rm -rf Pods
       - name: PodInstall
         run: pod install
+      - name: remove DerivedData
+        run: rm -rf Users/runner/Library/Developer/Xcode/DerivedData
       - name: Build
         run: |
             xcodebuild \
