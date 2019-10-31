@@ -9,7 +9,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform:iOS Simulator, id:5E0BE22C-A4F0-4CCF-A869-4C2E71F33844, OS:12.4, name:iPhone 6s']
+          destination: ['platform=iOS Simulator, id=8813E537-BE6C-429A-9CAC-E0428A50C93E, OS=12.4, name=iPhone 8']
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -18,7 +18,7 @@ jobs:
             xcodebuild \
             -workspace Test4All.xcworkspace \
             -scheme Test4All \
-            -destination 'platform=iOS,id=5E0BE22C-A4F0-4CCF-A869-4C2E71F33844' \
+            -destination "${destination}" \
             clean test
         env:
-         destination: 'platform=iOS,id=5E0BE22C-A4F0-4CCF-A869-4C2E71F33844'
+         destination: ${{ matrix.destination }}
