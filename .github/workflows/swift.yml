@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: PodInstall
-        run: Pod Install
+        run: pod install
       - name: Build
         run: |
             xcodebuild \
