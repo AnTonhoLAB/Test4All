@@ -21,4 +21,4 @@ jobs:
             -destination 'platform=iOS,id=5E0BE22C-A4F0-4CCF-A869-4C2E71F33844' \
             clean test
         env:
-         destination: ${{ matrix.destination }}
+         destination: 'platform=iOS,id=5E0BE22C-A4F0-4CCF-A869-4C2E71F33844'
